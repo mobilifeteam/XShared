@@ -14,6 +14,8 @@
 		84B997C21E16DC7B00C73A37 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B997C11E16DC7B00C73A37 /* SourceEditorExtension.swift */; };
 		84B997C41E16DC7B00C73A37 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B997C31E16DC7B00C73A37 /* SourceEditorCommand.swift */; };
 		84B997C81E16DC7B00C73A37 /* XShared.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84B997BA1E16DC7B00C73A37 /* XShared.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F4F4717729E516DF00BF4A1D /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F4717629E516DF00BF4A1D /* XcodeKit.framework */; };
+		F4F4717829E516DF00BF4A1D /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4F4717629E516DF00BF4A1D /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4F4717929E516DF00BF4A1D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F4F4717829E516DF00BF4A1D /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +65,7 @@
 		84B997C11E16DC7B00C73A37 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		84B997C31E16DC7B00C73A37 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		84B997C51E16DC7B00C73A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F4717629E516DF00BF4A1D /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B997BD1E16DC7B00C73A37 /* Cocoa.framework in Frameworks */,
+				F4F4717729E516DF00BF4A1D /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +121,7 @@
 		84B997BB1E16DC7B00C73A37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4F4717629E516DF00BF4A1D /* XcodeKit.framework */,
 				84B997BC1E16DC7B00C73A37 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -159,6 +175,7 @@
 				84B997B61E16DC7B00C73A37 /* Sources */,
 				84B997B71E16DC7B00C73A37 /* Frameworks */,
 				84B997B81E16DC7B00C73A37 /* Resources */,
+				F4F4717929E516DF00BF4A1D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,13 +198,15 @@
 				TargetAttributes = {
 					84B997A51E16DC6F00C73A37 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RNHQYN2ZEK;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					84B997B91E16DC7B00C73A37 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = RNHQYN2ZEK;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -196,6 +215,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -376,10 +396,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RNHQYN2ZEK;
 				INFOPLIST_FILE = Shared/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikita.shared;
@@ -396,16 +416,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = GPVA8JVMU3;
+				DEVELOPMENT_TEAM = RNHQYN2ZEK;
 				INFOPLIST_FILE = Shared/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikita.shared;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "27e5f952-ba25-424d-8650-c865eb3f2a43";
-				PROVISIONING_PROFILE_SPECIFIER = "Shared Dist";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -415,10 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XShared/XShared.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RNHQYN2ZEK;
 				INFOPLIST_FILE = XShared/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -435,17 +455,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XShared/XShared.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = GPVA8JVMU3;
+				DEVELOPMENT_TEAM = RNHQYN2ZEK;
 				INFOPLIST_FILE = XShared/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nikita.shared.xshared;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b860a89b-b678-4c1e-8741-a4f9d02321e3";
-				PROVISIONING_PROFILE_SPECIFIER = "XShared Dist";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
